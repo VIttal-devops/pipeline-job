@@ -9,6 +9,8 @@ pipeline {
 				   '''	
 			} 
 		}
+	
+	 stage ('deploy') {
                 parallel{
 		
 		stage ('deploy1') {
@@ -29,6 +31,8 @@ pipeline {
                         }
                 }
              }
+	
+}
 		
 		stage ('test') {
 			steps {
